@@ -39,9 +39,15 @@ export function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem>English</DropdownMenuItem>
-                <DropdownMenuItem>हिंदी</DropdownMenuItem>
-                <DropdownMenuItem>मराठी</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/">English</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/hi">हिंदी</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/mr">मराठी</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Button>Sign Up</Button>
@@ -68,9 +74,15 @@ export function Header() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="center">
-                  <DropdownMenuItem>English</DropdownMenuItem>
-                  <DropdownMenuItem>हिंदी</DropdownMenuItem>
-                  <DropdownMenuItem>मराठी</DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/">English</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/hi">हिंदी</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/mr">मराठी</Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <Button onClick={() => setIsMenuOpen(false)}>Sign Up</Button>
