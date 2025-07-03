@@ -1,7 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Wrench, Twitter, Facebook, Instagram } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function Footer() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-card border-t">
       <div className="container mx-auto px-4 py-8">
@@ -50,7 +59,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} LocSetu Connect. All rights reserved.</p>
+          <p>&copy; {year && `${year} `}LocSetu Connect. All rights reserved.</p>
         </div>
       </div>
     </footer>
